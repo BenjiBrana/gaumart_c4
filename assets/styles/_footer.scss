@@ -1,0 +1,27 @@
+footer {
+  @include flex(column, center, center, center);
+  width: 100%;
+  font-style: italic;
+  background: black;
+  color: whitesmoke;
+  gap: 2rem;
+  padding-bottom: 0.5rem;
+  h2 {
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 3rem;
+    b {
+      color: $orange;
+    }
+  }
+  ul {
+    @include flex(row, center, center, center);
+    flex: 1;
+    width: 100%;
+    .firstItem::after {
+      content: '|';
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
