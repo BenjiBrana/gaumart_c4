@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>GAUMART | Traiteur Paris</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="assets/img/logo_gaumart.png"
+        alt="logo de Gaumart"
+        title="Gaumart Traiteur Paris"
+      />
+      <h1><span class="orangeColor">GAUMART</span> Traiteur Paris</h1>
+      <nav>
+        <ul>
+          <li><a href="#petitDejeuner">Petit déjeuner</a></li>
+          <li><a href="#plateauRepas">Plateau repas</a></li>
+          <li><a href="#buffets">Buffets</a></li>
+          <li><a href="#cocktails">Cocktails</a></li>
+          <li><a href="#menus">Menus</a></li>
+          <li><a href="#contact">Nous Contacter</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="form-container">
+        <form action="" method="post">
+          <fieldset>
+            <legend>Réception</legend>
+            <div class="group">
+              <label class="titleGroup">Type de prestation :</label
+              ><br />
+              <div class="groupItem">
+                <input
+                  type="radio"
+                  name="type_prestation"
+                  value="cocktail_aperitif"
+                />
+                <label>Cocktail apéritif</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="radio"
+                  name="type_prestation"
+                  value="cocktail_dejeunatoire_dinatoire"
+                />
+                <label>Cocktail déjeunatoire/dînatoire</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="radio"
+                  name="type_prestation"
+                  value="buffet_debout"
+                />
+                <label>Buffet debout</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="radio"
+                  name="type_prestation"
+                  value="buffet_assis"
+                />
+                <label>Buffet assis</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="radio"
+                  name="type_prestation"
+                  value="repas_servi_a_l_assiette"
+                />
+                <label>Repas servi à l'assiette</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="radio"
+                  name="type_prestation"
+                  value="Petit déjeuner"
+                />
+                <label>petit_dejeuner</label>
+              </div>
+            </div>
+            <div class="group">
+              <div class="groupItem">
+                <label for="lieu_reception"
+                  >Lieu de réception :</label
+                >
+                <input
+                  type="text"
+                  id="lieu_reception"
+                  name="lieu_reception"
+                />
+              </div>
+              <div class="groupItem">
+                <label for="date_reception"
+                  >Date de réception :</label
+                >
+                <input
+                  type="date"
+                  id="date_reception"
+                  name="date_reception"
+                />
+              </div>
+              <div class="groupItem">
+                <label for="heure_debut">Heure de début :</label>
+                <input
+                  type="time"
+                  id="heure_debut"
+                  name="heure_debut"
+                />
+              </div>
+              <div class="groupItem">
+                <label for="heure_fin">Heure de fin :</label>
+                <input type="time" id="heure_fin" name="heure_fin" />
+              </div>
+              <div class="groupItem">
+                <label for="nombre_convives"
+                  >Nombre de convives :</label
+                >
+                <input
+                  type="number"
+                  id="nombre_convives"
+                  name="nombre_convives"
+                />
+              </div>
+            </div>
+
+            <div class="group">
+              <label class="titleGroup">Personnels souhaités :</label>
+
+              <div class="groupItem">
+                <label
+                  ><input
+                    type="radio"
+                    name="personnel_souhaite"
+                    value="oui"
+                  />
+                  Oui</label
+                >
+              </div>
+              <div class="groupItem">
+                <label
+                  ><input
+                    type="radio"
+                    name="personnel_souhaite"
+                    value="non"
+                  />
+                  Non</label
+                >
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Services</legend>
+            <label
+              ><input
+                type="checkbox"
+                name="services"
+                value="red_wine"
+              />
+              Vin rouge</label
+            ><br />
+            <label
+              ><input
+                type="checkbox"
+                name="services"
+                value="white_wine"
+              />
+              Vin blanc</label
+            ><br />
+          </fieldset>
+
+          <fieldset>
+            <legend>Votre budget</legend>
+            <label
+              >Budget par personne: Entre
+              <input type="text" name="budget_min" /> et
+              <input type="text" name="budget_max"
+            /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Vos coordonnées</legend>
+            <label>Nom: <input type="text" name="last_name" /></label
+            ><br />
+            <label
+              >Prénom: <input type="text" name="first_name" /></label
+            ><br />
+          </fieldset>
+
+          <input
+            type="submit"
+            value="Envoyer votre demande de devis"
+            class="form-button"
+          />
+        </form>
+      </div>
+    </section>
+
+    <script src="assets/script/imgBackground.js"></script>
+  </body>
+</html>

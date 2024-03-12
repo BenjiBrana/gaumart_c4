@@ -53,6 +53,8 @@
     }
   }
   form {
+    @include flex(column, space-around, stretch, center);
+    flex-wrap: wrap;
     flex: 1;
     .group {
       @include flex(column, space-around, start, center);
@@ -73,7 +75,7 @@
       }
       input {
         height: 2rem;
-        width: 30%;
+        width: 50%;
         border: 0.1rem solid rgba(0, 0, 0, 0.5);
         border-radius: 0.5rem;
         padding-left: 1rem;
