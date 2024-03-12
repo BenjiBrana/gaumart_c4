@@ -65,169 +65,414 @@
               <div class="groupItem">
                 <input
                   type="radio"
+                  id="cocktail_aperitif"
                   name="type_prestation"
                   value="cocktail_aperitif"
                 />
-                <label>Cocktail apéritif</label>
+                <label for="cocktail_aperitif"
+                  >Cocktail apéritif</label
+                >
               </div>
               <div class="groupItem">
                 <input
                   type="radio"
+                  id="cocktail_dejeunatoire_dinatoire"
                   name="type_prestation"
                   value="cocktail_dejeunatoire_dinatoire"
                 />
-                <label>Cocktail déjeunatoire/dînatoire</label>
+                <label for="cocktail_dejeunatoire_dinatoire"
+                  >Cocktail déjeunatoire/dînatoire</label
+                >
               </div>
               <div class="groupItem">
                 <input
                   type="radio"
+                  id="buffet_debout"
                   name="type_prestation"
                   value="buffet_debout"
                 />
-                <label>Buffet debout</label>
+                <label for="buffet_debout">Buffet debout</label>
               </div>
               <div class="groupItem">
                 <input
                   type="radio"
+                  id="buffet_assis"
                   name="type_prestation"
                   value="buffet_assis"
                 />
-                <label>Buffet assis</label>
+                <label for="buffet_assis">Buffet assis</label>
               </div>
               <div class="groupItem">
                 <input
                   type="radio"
+                  id="repas_servi_a_l_assiette"
                   name="type_prestation"
                   value="repas_servi_a_l_assiette"
                 />
-                <label>Repas servi à l'assiette</label>
+                <label for="repas_servi_a_l_assiette"
+                  >Repas servi à l'assiette</label
+                >
               </div>
               <div class="groupItem">
                 <input
                   type="radio"
+                  id="petit_dejeuner"
                   name="type_prestation"
-                  value="Petit déjeuner"
+                  value="petit_dejeuner"
                 />
-                <label>petit_dejeuner</label>
+                <label for="petit_dejeuner">Petit déjeuner</label>
               </div>
             </div>
+
             <div class="group">
               <div class="groupItem">
-                <label for="lieu_reception"
-                  >Lieu de réception :</label
-                >
+                <label for="lieuReception">Lieu de réception :</label>
                 <input
                   type="text"
-                  id="lieu_reception"
-                  name="lieu_reception"
+                  id="lieuReception"
+                  name="lieuReception"
                 />
               </div>
               <div class="groupItem">
-                <label for="date_reception"
-                  >Date de réception :</label
-                >
+                <label for="dateReception">Date de réception :</label>
                 <input
                   type="date"
-                  id="date_reception"
-                  name="date_reception"
+                  id="dateReception"
+                  name="dateReception"
                 />
               </div>
               <div class="groupItem">
-                <label for="heure_debut">Heure de début :</label>
+                <label for="heureDebut">Heure de début :</label>
                 <input
                   type="time"
-                  id="heure_debut"
-                  name="heure_debut"
+                  id="heureDebut"
+                  name="heureDebut"
                 />
               </div>
               <div class="groupItem">
-                <label for="heure_fin">Heure de fin :</label>
-                <input type="time" id="heure_fin" name="heure_fin" />
+                <label for="heureFin">Heure de fin :</label>
+                <input type="time" id="heureFin" name="heureFin" />
               </div>
               <div class="groupItem">
-                <label for="nombre_convives"
+                <label for="nombreConvives"
                   >Nombre de convives :</label
                 >
                 <input
                   type="number"
-                  id="nombre_convives"
-                  name="nombre_convives"
+                  id="nombreConvives"
+                  name="nombreConvives"
                 />
               </div>
             </div>
 
             <div class="group">
               <label class="titleGroup">Personnels souhaités :</label>
+              <div class="groupItem">
+                <label class="choix" for="personnelOui"> Oui </label>
+                <input
+                  type="radio"
+                  id="personnelOui"
+                  name="personnelSouhaite"
+                  value="oui"
+                />
 
-              <div class="groupItem">
-                <label
-                  ><input
-                    type="radio"
-                    name="personnel_souhaite"
-                    value="oui"
-                  />
-                  Oui</label
-                >
-              </div>
-              <div class="groupItem">
-                <label
-                  ><input
-                    type="radio"
-                    name="personnel_souhaite"
-                    value="non"
-                  />
-                  Non</label
-                >
+                <label class="choix" for="personnelNon"> Non </label>
+                <input
+                  type="radio"
+                  id="personnelNon"
+                  name="personnelSouhaite"
+                  value="non"
+                />
               </div>
             </div>
           </fieldset>
           <fieldset>
             <legend>Services</legend>
-            <label
-              ><input
-                type="checkbox"
-                name="services"
-                value="red_wine"
-              />
-              Vin rouge</label
-            ><br />
-            <label
-              ><input
-                type="checkbox"
-                name="services"
-                value="white_wine"
-              />
-              Vin blanc</label
-            ><br />
+            <div class="group">
+              <label class="titleGroup">Boissons :</label>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="red_wine"
+                  name="services"
+                  value="red_wine"
+                />
+                <label for="red_wine">Vin rouge</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="white_wine"
+                  name="services"
+                  value="white_wine"
+                />
+                <label for="white_wine">Vin blanc</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="rose_wine"
+                  name="services"
+                  value="rose_wine"
+                />
+                <label for="rose_wine">Vin rosé</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="champagne"
+                  name="services"
+                  value="champagne"
+                />
+                <label for="champagne">Champagne</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="crement"
+                  name="services"
+                  value="crement"
+                />
+                <label for="crement">Crément</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="kir"
+                  name="services"
+                  value="kir"
+                />
+                <label for="kir">Kir</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="alcool_strong"
+                  name="services"
+                  value="alcool_strong"
+                />
+                <label for="alcool_strong">Alccol fort</label>
+              </div>
+            </div>
+
+            <div class="group">
+              <label class="titleGroup"
+                >Boissons non alcoolisées:</label
+              >
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="eaux_minerales"
+                  name="services"
+                  value="eaux_minerales"
+                />
+                <label for="eaux_minerales"
+                  >Eau minérales plate ou gazeuse</label
+                >
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="cafe"
+                  name="services"
+                  value="cafe"
+                />
+                <label for="cafe">Café</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="soft"
+                  name="services"
+                  value="soft"
+                />
+                <label for="soft">Soft (jus de fruits ou soda)</label>
+              </div>
+            </div>
+
+            <div class="group">
+              <label class="titleGroup"
+                >Besoins complémentaires :</label
+              >
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="materiels_jetables"
+                  name="services"
+                  value="materiels_jetables"
+                />
+                <label for="materiels_jetables"
+                  >Matériels jetables</label
+                >
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="materiels_location"
+                  name="services"
+                  value="materiels_location"
+                />
+                <label for="materiels_location"
+                  >Matériel de réception à louer</label
+                >
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="personnel_service"
+                  name="services"
+                  value="personnel_service"
+                />
+                <label for="personnel_service"
+                  >Personnel de service</label
+                >
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="decoration_buffet"
+                  name="services"
+                  value="decoration_buffet"
+                />
+                <label for="decoration_buffet"
+                  >Décoration de buffet</label
+                >
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="decoration_florale"
+                  name="services"
+                  value="decoration_florale"
+                />
+                <label for="decoration_florale"
+                  >Décoration florale</label
+                >
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="centre_table"
+                  name="services"
+                  value="centre_table"
+                />
+                <label for="centre_table"
+                  >Centre de table en fleurs fraiches</label
+                >
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="nappage"
+                  name="services"
+                  value="nappage"
+                />
+                <label for="nappage">Nappage</label>
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="animation_musicale"
+                  name="services"
+                  value="animation_musicale"
+                />
+                <label for="animation_musicale"
+                  >Animation musicale</label
+                >
+              </div>
+              <div class="groupItem">
+                <input
+                  type="checkbox"
+                  id="salle_reception"
+                  name="services"
+                  value="salle_reception"
+                />
+                <label for="salle_reception"
+                  >Salles de réception</label
+                >
+              </div>
+              <div class="groupItem">
+                <label class="labelAutre" for="autreService"
+                  >Autres service :</label
+                >
+                <input
+                  type="text"
+                  id="autreService"
+                  name="autreService"
+                />
+              </div>
+            </div>
           </fieldset>
 
           <fieldset>
             <legend>Votre budget</legend>
-            <label
-              >Budget par personne: Entre
-              <input type="text" name="budget_min" /> et
-              <input type="text" name="budget_max"
-            /></label>
+            <div class="group">
+              <div class="titleGroup">
+                <label>Budget par personne:</label>
+              </div>
+              <div class="demandePrix">
+                <span>Entre</span
+                ><label for="budget_min">(minimum)</label>
+                <input
+                  type="number"
+                  min="0"
+                  id="budget_min"
+                  name="budget_min"
+                />
+                <span>et</span>
+                <label for="budget_max">(maximum)</label>
+                <input
+                  type="number"
+                  min="1"
+                  id="budget_max"
+                  name="budget_max"
+                />
+              </div>
+            </div>
           </fieldset>
 
           <fieldset>
             <legend>Vos coordonnées</legend>
-            <label>Nom: <input type="text" name="last_name" /></label
-            ><br />
-            <label
-              >Prénom: <input type="text" name="first_name" /></label
-            ><br />
+            <div class="group">
+              <div class="groupItem">
+                <label for="last_name">Nom: </label
+                ><input type="text" id="last_name" name="last_name" />
+              </div>
+              <div class="groupItem">
+                <label for="first_name">Prénom: </label
+                ><input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                />
+              </div>
+              <div class="groupItem">
+                <label for="societe">Société: </label
+                ><input type="text" id="societe" name="societe" />
+              </div>
+              <div class="groupItem">
+                <label for="adresse">Adresse: </label
+                ><input type="text" id="adresse" name="adresse" />
+              </div>
+              <div class="groupItem">
+                <label for="telephone">Téléphone: </label
+                ><input type="tel" id="telephone" name="telephone" />
+              </div>
+              <div class="groupItem">
+                <label for="email">Email: </label
+                ><input type="email" id="email" name="email" />
+              </div>
+            </div>
           </fieldset>
-
-          <input
-            type="submit"
-            value="Envoyer votre demande de devis"
-            class="form-button"
-          />
+          <div class="fieldsetBtn">
+            <input
+              type="submit"
+              value="Envoyer votre demande de devis"
+              class="btnSubmit"
+            />
+          </div>
         </form>
       </div>
     </section>
-
-    <script src="assets/script/imgBackground.js"></script>
   </body>
 </html>

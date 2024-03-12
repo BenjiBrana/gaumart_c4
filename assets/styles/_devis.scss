@@ -8,11 +8,13 @@ section {
     flex-wrap: wrap;
     flex: 1;
     padding: 2rem;
-    width: 50%;
+    width: 100%;
+
     fieldset {
       border: 1px solid $orange;
-      padding: 2rem;
+      padding: 5rem;
       margin-bottom: 3rem;
+      width: 100%;
       legend {
         @include flex(row, center, center, center);
         text-align: center;
@@ -20,30 +22,61 @@ section {
         font-size: 2.5rem;
         font-weight: bold;
         color: $orange;
+        padding: 1rem;
       }
       .group {
         @include flex(column, center, stretch, center);
         margin-bottom: 2em;
         gap: 1rem;
-        .titleGroup {
-          font-size: 2rem;
-          font-weight: bold;
+        .demandePrix {
+          @include flex(row, space-around, center, center);
         }
-        .groupItem {
-          width: 100%;
-          gap: 2rem;
-          @include flex(row, center, center, center);
-          flex-wrap: wrap;
-          label {
-            font-weight: bold;
-            flex: 3;
-          }
-          input {
-            flex: 1;
-            height: 2rem;
-            border: 0.1rem solid rgba(0, 0, 0, 0.5);
-            border-radius: 0.5rem;
-          }
+      }
+      .titleGroup {
+        font-size: 2rem;
+        font-weight: bold;
+        padding-bottom: 2rem;
+      }
+      .groupItem {
+        @include flex(row, center, center, center);
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        label.labelAutre,
+        input#autreService {
+          flex: 1;
+          text-align: center;
+        }
+        .choix {
+          text-align: center;
+        }
+        label {
+          font-weight: bold;
+          flex: 3;
+        }
+        input {
+          flex: 1;
+          height: 2rem;
+          border: 0.1rem solid rgba(0, 0, 0, 0.5);
+          border-radius: 0.5rem;
+        }
+        #lieuReception,
+        #dateReception,
+        #heureDebut,
+        #heureFin,
+        #nombreConvives {
+          flex: 3;
+          text-align: center;
+          font-size: 1.8rem;
+        }
+        #last_name,
+        #first_name,
+        #societe,
+        #adresse,
+        #telephone,
+        #email {
+          flex: 7;
         }
       }
     }
@@ -54,12 +87,28 @@ section {
       border-radius: 0.5rem;
       border: 0.1rem solid rgba(0, 0, 0, 0.5);
     }
-  }
-  .form-button {
-    background-color: $orange;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+    div.fieldsetBtn {
+      padding: 5rem;
+      margin-bottom: 3rem;
+      width: 100%;
+      border: none;
+      .btnSubmit {
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+        background: #ff9900;
+        color: #ffffff;
+        border-radius: 0.5rem;
+        border: 0.1rem solid black;
+        cursor: pointer;
+        &:hover {
+          background: $orange;
+          color: #000000;
+          transition: all 0.3s ease;
+        }
+      }
+    }
   }
 }
