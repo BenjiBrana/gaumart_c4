@@ -25,3 +25,26 @@ footer {
     }
   }
 }
+@media screen and (max-width: 599px) {
+  footer {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 325px) {
+  footer {
+    h2 {
+      font-size: 1.5rem;
+    }
+    ul {
+      @include flex(column, center, center, center);
+      gap: 1rem;
+      .firstItem::after {
+        content: '';
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

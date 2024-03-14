@@ -27,6 +27,7 @@
   }
 }
 .sectionArticles {
+  width: 100%;
   position: relative;
   margin-bottom: 1rem;
   .arrowTop {
@@ -59,11 +60,12 @@
     margin-top: 3rem;
     .separateur {
       width: 100%;
-      @include flex(row, end, center, end);
+      @include flex(row, end, center, center);
       .pancarte {
         @include flex(row, end, center, end);
         width: 60%;
         margin-bottom: 5rem;
+        border-radius: 0.5rem;
         @include degraderGray();
         h2 {
           @include ombreDark;
@@ -73,11 +75,12 @@
           color: $orange;
           font-size: 3rem;
           width: 100%;
+          text-transform: uppercase;
         }
       }
     }
     .contenuArticle {
-      @include flex(row, start, start, center);
+      @include flex(row, space-between, center, center);
       margin-bottom: 5rem;
       img {
         @include ombreOrangeRight();
@@ -89,7 +92,7 @@
     }
     .contenuArticleReverse {
       padding-bottom: 5rem;
-      @include flex(row-reverse, space-between, start, center);
+      @include flex(row-reverse, space-between, center, center);
       background: #000;
       color: whitesmoke;
       img {
@@ -115,7 +118,7 @@
         h3 {
           padding: 5rem 0;
           text-align: center;
-          color: $orange;
+          color: $orangeDark;
           font-size: 3rem;
         }
         p {
@@ -124,9 +127,144 @@
           padding: 0 6rem;
           text-align: start;
           font-size: 2rem;
-          font-weight: bold;
           line-height: 5rem;
+          b {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-bottom: 0.1rem solid;
+            padding-bottom: 0.5rem;
+          }
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1299px) {
+  #articlePrincipal {
+    h2 {
+      font-size: 3rem;
+      .big {
+        font-size: 8rem;
+      }
+    }
+  }
+  .sectionArticles {
+    #petitDejeuner,
+    #buffets,
+    #cocktails,
+    #menus,
+    #petitDejeuner,
+    #plateauRepas {
+      .contenuArticle,
+      .contenuArticleReverse {
+        .contenu {
+          h3 {
+            font-size: 2.5rem;
+            margin: 0 2rem;
+          }
+          p {
+            width: 70%;
+          }
+        }
+        img {
+          height: 60vh;
+        }
+      }
+    }
+    article#menus article.articleMenu div.contenuArticle,
+    article#menus article.articleMenu div.contenuArticleReverse {
+      align-items: flex-end;
+      .contenu {
+        gap: 2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 999px) {
+  .sectionArticles {
+    #petitDejeuner,
+    #buffets,
+    #cocktails,
+    #menus,
+    #petitDejeuner,
+    #plateauRepas {
+      .separateur {
+        .pancarte {
+          justify-content: center;
+          width: 100%;
+        }
+      }
+      .contenuArticle,
+      .contenuArticleReverse {
+        @include flex(column, center, center, center);
+        .contenu {
+          gap: 0;
+        }
+        img {
+          @include ombreOrangeRight();
+          border-bottom-left-radius: 5rem;
+          border-bottom-right-radius: 5rem;
+        }
+      }
+    }
+    article#menus article.articleMenu div.contenuArticle,
+    article#menus article.articleMenu div.contenuArticleReverse {
+      align-items: center;
+    }
+  }
+}
+@media screen and (max-width: 599px) {
+  #articlePrincipal {
+    height: 80vh;
+    h2 {
+      height: 80vh;
+      font-size: 2rem;
+      .big {
+        font-size: 6rem;
+      }
+    }
+  }
+
+  .sectionArticles {
+    #petitDejeuner,
+    #buffets,
+    #cocktails,
+    #menus,
+    #petitDejeuner,
+    #plateauRepas {
+      .separateur {
+        .pancarte {
+          h2 {
+            padding: 2rem 0;
+          }
+        }
+      }
+      .contenuArticle,
+      .contenuArticleReverse {
+        img {
+          width: 90%;
+          height: 50%;
+        }
+        .contenu {
+          p {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 399px) {
+  #articlePrincipal {
+    height: 89vh;
+    h2 {
+      height: 89vh;
+      font-size: 2rem;
+      text-align: center;
+      .big {
+        font-size: 4rem;
+      }
+      .orangeColor {
+        font-size: 2.5rem;
       }
     }
   }

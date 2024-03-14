@@ -1,3 +1,24 @@
+.titreContact {
+  width: 100%;
+  margin-top: 4rem;
+  @include flex(row, center, center, center);
+  .pancarte {
+    @include flex(row, end, center, end);
+    width: 60%;
+    margin-bottom: 5rem;
+    @include degraderGray();
+    h2 {
+      @include ombreDark;
+      padding: 5rem;
+      letter-spacing: 1rem;
+      text-align: center;
+      color: $orange;
+      font-size: 3rem;
+      width: 100%;
+      text-transform: uppercase;
+    }
+  }
+}
 #contact {
   @include flex(row, space-around, center, center);
   width: 100%;
@@ -6,12 +27,13 @@
     margin-top: 2rem;
     flex: 1;
     @include flex(column, start, center, center);
-    h2 {
+    h3 {
       @include ombreDark();
       padding: 1rem;
       font-weight: bold;
       font-size: 3rem;
-      color: $orange;
+      letter-spacing: 1rem;
+      color: $orangeDark;
     }
     .devisBtn {
       width: 50%;
@@ -19,14 +41,14 @@
       text-align: center;
       font-weight: bold;
       font-size: 2rem;
-      background: #ff9900;
-      color: #ffffff;
       border-radius: 0.5rem;
       border: 0.1rem solid black;
       cursor: pointer;
+      background: $orange;
+      color: #000000;
       &:hover {
-        background: $orange;
-        color: #000000;
+        background: $orangeDark;
+        color: #ffffff;
         transition: all 0.3s ease;
       }
     }
@@ -46,7 +68,7 @@
         font-size: 2rem;
       }
       b {
-        color: $orange;
+        color: $orangeDark;
         font-weight: bold;
         cursor: pointer;
       }
@@ -56,6 +78,9 @@
     @include flex(column, space-around, stretch, center);
     flex-wrap: wrap;
     flex: 1;
+    .titreContact {
+      margin-top: 2rem;
+    }
     .group {
       @include flex(column, space-around, start, center);
       gap: 1rem;
@@ -70,7 +95,7 @@
       label {
         font-weight: bold;
         b {
-          color: $orange;
+          color: $orangeDark;
         }
       }
       input {
@@ -94,6 +119,32 @@
         background: rgb(2, 215, 2);
         color: black;
         transition: all 0.3s ease;
+      }
+    }
+  }
+}
+@media screen and (max-width: 999px) {
+  #contact {
+    @include flex(column, space-around, center, center);
+    form {
+      order: 1;
+    }
+    .renseignements {
+      order: 2;
+    }
+  }
+}
+@media screen and (max-width: 599px) {
+  .titreContact {
+    .pancarte {
+      width: 100%;
+    }
+  }
+  form {
+    padding: 0 2rem;
+    .group {
+      textarea {
+        width: 90%;
       }
     }
   }

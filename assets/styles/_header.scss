@@ -4,32 +4,53 @@ header {
   width: 100%;
   font-weight: bold;
   font-style: italic;
+
   img {
     width: 5%;
     margin-left: 5rem;
   }
+
   h1 {
     @include flex(column, start, start, center);
     font-size: 3rem;
     flex: 1;
+    padding: 2rem 0;
+
     span.orangeColor {
-      color: $orange;
+      color: $orangeDark;
       font-size: 3.2rem;
     }
   }
+
+  .btnNav {
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    display: none;
+
+    .closeIcon {
+      display: none;
+    }
+  }
+
   nav {
     flex: 3;
     @include flex(column, center, stretch, stretch);
     height: 10vh;
     flex-wrap: wrap;
+    width: 100%;
+
     ul {
       @include flex(row, space-around, center, center);
+
       li {
         cursor: pointer;
         font-size: 2rem;
+
         a {
-          color: #000;
+          color: black;
           padding: 1rem;
+
           &:hover {
             border-bottom: 0.25rem solid $orange;
             border-radius: 0.5rem;
@@ -38,15 +59,44 @@ header {
       }
     }
   }
-}
-@media screen and (max-width: 1024px) {
-  header {
+
+  @media screen and (max-width: 1024px) {
+    .btnNav {
+      display: flex;
+      margin-right: 1rem;
+    }
+
+    .menuIcon {
+      display: flex;
+      fill: rgb(0, 0, 0);
+    }
+
+    .closeIcon {
+      display: none;
+      z-index: 2;
+      fill: white;
+    }
+
+    nav.active {
+      display: flex;
+
+      .menuIcon {
+        display: none;
+      }
+
+      .closeIcon {
+        display: flex;
+      }
+    }
+
     nav {
+      display: none;
       z-index: 1;
-      position: relative;
+      width: 100vw;
+      position: fixed;
+
       ul {
         @include flex(column, center, center, center);
-        color: $orange;
         background: rgba(0, 0, 0, 0.7);
         gap: 2rem;
         font-size: 4rem;
@@ -55,14 +105,49 @@ header {
         position: absolute;
         height: 100vh;
         width: 100vw;
+
         li {
           padding: 2rem 0;
           width: 100%;
           text-align: center;
+          font-weight: bold;
+          text-transform: uppercase;
+
+          a {
+            color: $orange;
+
+            &:hover {
+              color: $orangeDark;
+            }
+          }
         }
+
         li:hover {
           background: #fff;
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 999px) {
+  header {
+    img {
+      width: 10%;
+      margin-left: 3rem;
+    }
+  }
+}
+@media screen and (max-width: 399px) {
+  header {
+    img {
+      width: 15%;
+      margin-left: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+
+      span.orangeColor {
+        font-size: 2rem;
       }
     }
   }
