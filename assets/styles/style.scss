@@ -45,23 +45,23 @@ $orangeDark: rgb(185, 94, 4);
   background: rgba(123, 123, 123, 0.5);
   background: linear-gradient(
     91deg,
-    rgba(123, 123, 123, 0.5) 0%,
-    rgba(113, 113, 113, 0.8) 100%
+    rgba(155, 80, 0, 0.5) 0%,
+    rgb(155, 80, 0) 100%
   );
   background: -webkit-linear-gradient(
     91deg,
-    rgba(123, 123, 123, 0.5) 0%,
-    rgba(113, 113, 113, 0.8) 100%
+    rgba(155, 80, 0, 0.5) 0%,
+    rgba(155, 80, 0) 100%
   );
   background: -moz-linear-gradient(
     91deg,
-    rgba(123, 123, 123, 0.5) 0%,
-    rgba(113, 113, 113, 0.8) 100%
+    rgba(155, 80, 0, 0.5) 0%,
+    rgba(155, 80, 0) 100%
   );
 }
 //import
-@import 'reset.scss', 'header.scss', 'section.scss', 'contact.scss',
-  'footer.scss', 'devis.scss';
+@import 'reset.scss', 'headerDevis.scss', 'header.scss',
+  'section.scss', 'contact.scss', 'footer.scss', 'devis.scss';
 
 html {
   font-size: 62.5%;

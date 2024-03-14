@@ -1,0 +1,58 @@
+header.headerDevis {
+  @include flex(row, start, center, center);
+  gap: 1rem;
+  width: 100%;
+  font-weight: bold;
+  font-style: italic;
+
+  img {
+    width: 5%;
+    margin-left: 5rem;
+  }
+
+  h1 {
+    @include flex(column, start, start, center);
+    font-size: 3rem;
+    flex: 1;
+    padding: 2rem 0;
+
+    span.orangeColor {
+      color: $orangeDark;
+      font-size: 3.2rem;
+    }
+  }
+
+  nav.navDevis {
+    flex: 3;
+    @include flex(column, center, stretch, stretch);
+    height: 10vh;
+    flex-wrap: wrap;
+    width: 100%;
+
+    ul {
+      @include flex(row, end, center, center);
+
+      li {
+        cursor: pointer;
+        font-size: 2rem;
+
+        a {
+          color: black;
+          padding: 1rem;
+
+          &:hover {
+            border-bottom: 0.25rem solid $orange;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 999px) {
+  header.headerDevis {
+    img {
+      width: 10%;
+    }
+  }
+}

@@ -68,12 +68,12 @@
         border-radius: 0.5rem;
         @include degraderGray();
         h2 {
-          @include ombreDark;
+          @include ombreWhite();
           padding: 5rem;
           letter-spacing: 1rem;
           text-align: center;
-          color: $orange;
-          font-size: 3rem;
+          color: black;
+          font-size: 4rem;
           width: 100%;
           text-transform: uppercase;
         }
@@ -85,9 +85,6 @@
       img {
         @include ombreOrangeRight();
         border-bottom-right-radius: 5rem;
-      }
-      h3 {
-        @include ombreDark();
       }
     }
     .contenuArticleReverse {
@@ -119,7 +116,7 @@
           padding: 5rem 0;
           text-align: center;
           color: $orangeDark;
-          font-size: 3rem;
+          font-size: 4rem;
         }
         p {
           width: 50%;
