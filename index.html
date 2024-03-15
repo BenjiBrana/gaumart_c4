@@ -363,7 +363,7 @@
             Faire une demande de devis en ligne</a
           >
         </div>
-        <form action="/submit-form" method="post">
+        <form action="./index.html" method="post">
           <div class="group">
             <label for="nom">Nom <b>*</b></label>
             <input
@@ -371,6 +371,7 @@
               id="nom"
               name="nom"
               placeholder="Dubont"
+              pattern="[a-zA-ZÀ-ÿ\- ]+"
               required
             />
           </div>
@@ -381,6 +382,7 @@
               id="societe"
               name="societe"
               placeholder="Dubont-hé"
+              pattern="[a-zA-ZÀ-ÿ0-9\- ]+"
               required
             />
           </div>
@@ -401,6 +403,7 @@
               id="tel"
               name="tel"
               placeholder="0616401364"
+              pattern="[0-9]{10}"
               required
             />
           </div>
@@ -416,6 +419,7 @@ Cordialement.
 Dubont-hé"
               rows="8"
               cols="60"
+              pattern="^[a-zA-Z0-9\s]*$"
               required
             ></textarea>
           </div>
@@ -432,5 +436,6 @@ Dubont-hé"
     </footer>
     <script src="assets/script/imgBackground.js"></script>
     <script src="assets/script/menuBurger.js"></script>
+    <script src="assets/script/cta.js"></script>
   </body>
 </html>
