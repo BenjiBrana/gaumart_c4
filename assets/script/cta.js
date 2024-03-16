@@ -17,7 +17,7 @@ titreCTA.className = 'titreCTA';
 //Bouton pour redirigée vers le devis
 let inputCTA = document.createElement('a');
 cta.appendChild(inputCTA);
-inputCTA.innerText = 'Cliquer ici';
+inputCTA.innerText = 'Cliquez ici';
 inputCTA.className = 'redirection';
 inputCTA.setAttribute('href', '../../devis.html');
 

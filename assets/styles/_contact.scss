@@ -12,7 +12,7 @@
       padding: 5rem;
       letter-spacing: 1rem;
       text-align: center;
-      color: black;
+      color: currentColor;
       font-size: 4rem;
       width: 100%;
       text-transform: uppercase;
@@ -42,10 +42,10 @@
       font-weight: bold;
       font-size: 2rem;
       border-radius: 0.5rem;
-      border: 0.1rem solid black;
+      border: 0.1rem solid currentColor;
       cursor: pointer;
       background: $orange;
-      color: #000000;
+      color: currentColor;
       &:hover {
         background: $orangeDark;
         color: #ffffff;
@@ -90,7 +90,7 @@
         padding-left: 1rem;
         text-align: start;
         border-radius: 0.5rem;
-        border: 0.1rem solid rgba(0, 0, 0, 0.5);
+        border: 0.1rem solid currentColor;
       }
       label {
         font-weight: bold;
@@ -101,7 +101,7 @@
       input {
         height: 2rem;
         width: 50%;
-        border: 0.1rem solid rgba(0, 0, 0, 0.5);
+        border: 0.1rem solid currentColor;
         border-radius: 0.5rem;
         padding-left: 1rem;
       }
@@ -117,7 +117,7 @@
       cursor: pointer;
       &:hover {
         background: rgb(2, 215, 2);
-        color: black;
+        color: currentColor;
         transition: all 0.3s ease;
       }
     }

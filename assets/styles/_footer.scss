@@ -2,8 +2,8 @@ footer {
   @include flex(column, center, center, center);
   width: 100%;
   font-style: italic;
-  background: black;
-  color: whitesmoke;
+  background: $dark;
+  color: $light;
   gap: 2rem;
   padding-bottom: 0.5rem;
   h2 {
@@ -22,6 +22,16 @@ footer {
       content: '|';
       margin-left: 0.5rem;
       margin-right: 0.5rem;
+    }
+    li {
+      @include flex(row, center, center, center);
+      margin: 1rem;
+      gap: 1rem;
+      img {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 5rem;
+      }
     }
   }
 }

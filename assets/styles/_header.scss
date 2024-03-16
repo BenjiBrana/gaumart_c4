@@ -23,14 +23,10 @@ header {
   }
 
   .btnNav {
+    display: none;
     height: 3rem;
     width: 3rem;
     cursor: pointer;
-    display: none;
-
-    .closeIcon {
-      display: none;
-    }
   }
 
   nav {
@@ -48,7 +44,7 @@ header {
         font-size: 2rem;
 
         a {
-          color: black;
+          color: currentColor;
           padding: 1rem;
 
           &:hover {
@@ -67,26 +63,13 @@ header {
     }
 
     .menuIcon {
-      display: flex;
-      fill: rgb(0, 0, 0);
+      fill: currentColor;
     }
 
     .closeIcon {
       display: none;
       z-index: 2;
-      fill: white;
-    }
-
-    nav.active {
-      display: flex;
-
-      .menuIcon {
-        display: none;
-      }
-
-      .closeIcon {
-        display: flex;
-      }
+      fill: $light;
     }
 
     nav.nav {
@@ -126,6 +109,18 @@ header {
           background: #fff;
         }
       }
+    }
+  }
+  nav.active {
+    display: flex;
+    top: 0;
+
+    .menuIcon {
+      display: none;
+    }
+
+    .closeIcon {
+      display: flex;
     }
   }
 }

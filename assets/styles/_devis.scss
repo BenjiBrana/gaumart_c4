@@ -7,9 +7,7 @@ section {
   @include flex(column, center, center, center);
   width: 100%;
   .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, center, center, center);
     height: 100%;
 
     form {
@@ -77,7 +75,7 @@ section {
           input {
             flex: 1;
             height: 2rem;
-            border: 0.1rem solid rgba(0, 0, 0, 0.5);
+            border: 0.1rem solid currentColor;
             border-radius: 0.5rem;
           }
 
@@ -97,7 +95,7 @@ section {
           #adresse,
           #telephone,
           #email {
-            flex: 7;
+            flex: 6;
           }
         }
       }
@@ -107,7 +105,7 @@ section {
         padding-left: 1rem;
         text-align: start;
         border-radius: 0.5rem;
-        border: 0.1rem solid rgba(0, 0, 0, 0.5);
+        border: 0.1rem solid currentColor;
       }
 
       div.fieldsetBtn {
@@ -126,12 +124,12 @@ section {
           background: #ff9900;
           color: #373737;
           border-radius: 0.5rem;
-          border: 0.1rem solid black;
+          border: 0.1rem solid currentColor;
           cursor: pointer;
 
           &:hover {
             background: $orange;
-            color: #000000;
+            color: currentColor;
             transition: all 0.3s ease;
           }
         }
@@ -144,7 +142,7 @@ section {
   section {
     .container {
       form {
-        max-width: 90%;
+        max-width: 100%;
         fieldset {
           .group {
             .demandePrix {
