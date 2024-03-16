@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   //Tableau de toutes les images
   const backgrounds = [
-    '../assets/img/csm_patissier_traiteur_a_paris.jpg',
-    '../assets/img/csm_traiteur.jpg',
-    '../assets/img/csm_traiteur_creat.jpg',
-    '../assets/img/sale_sucre.jpg',
-    '../assets/img/Slider_11.jpg',
-    '../assets/img/traiteur_defile_mode.jpg',
+    '../assets/img/csm_patissier_traiteur_a_paris.webp',
+    '../assets/img/csm_traiteur.webp',
+    '../assets/img/csm_traiteur_creat.webp',
+    '../assets/img/sale_sucre.webp',
+    '../assets/img/Slider_11.webp',
+    '../assets/img/traiteur_defile_mode.webp',
   ];
   //index de départ
   let currentIndex = 0;
